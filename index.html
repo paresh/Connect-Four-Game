@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Connect Four Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!--start Navbar-->
+    <nav class="navbar navbar-inverse" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Play Connect Four</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-toggle="modal" data-target="#help">Help</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--end NavBar-->
+
+    <!--Game Board-->
+    <div id="board" class="container-fluid">
+        <div id="turn">PLAYER TURN :<span id="color"></span>
+        </div>
+        <table>
+            <tr>
+                <td id="color11"></td>
+                <td id="color12"></td>
+                <td id="color13"></td>
+                <td id="color14"></td>
+                <td id="color15"></td>
+                <td id="color16"></td>
+                <td id="color17"></td>
+            </tr>
+            <tr>
+                <td id="color21"></td>
+                <td id="color22"></td>
+                <td id="color23"></td>
+                <td id="color24"></td>
+                <td id="color25"></td>
+                <td id="color26"></td>
+                <td id="color27"></td>
+            </tr>
+            <tr>
+                <td id="color31"></td>
+                <td id="color32"></td>
+                <td id="color33"></td>
+                <td id="color34"></td>
+                <td id="color35"></td>
+                <td id="color36"></td>
+                <td id="color37"></td>
+            </tr>
+            <tr>
+                <td id="color41"></td>
+                <td id="color42"></td>
+                <td id="color43"></td>
+                <td id="color44"></td>
+                <td id="color45"></td>
+                <td id="color46"></td>
+                <td id="color47"></td>
+            </tr>
+            <tr>
+                <td id="color51"></td>
+                <td id="color52"></td>
+                <td id="color53"></td>
+                <td id="color54"></td>
+                <td id="color55"></td>
+                <td id="color56"></td>
+                <td id="color57"></td>
+            </tr>
+            <tr>
+                <td id="color61"></td>
+                <td id="color62"></td>
+                <td id="color63"></td>
+                <td id="color64"></td>
+                <td id="color65"></td>
+                <td id="color66"></td>
+                <td id="color67"></td>
+            </tr>
+        </table>
+        <!--Conformation msg for users-->
+        <div id="msgs">
+            <span id="player1">Red</span>
+            <span id="player2">Black</span>
+            <span id="newGame">Are you sure you want to restart the Game?</span>
+            <span id="winner">Player %s won the Game. Do you want to play a new game?</span>
+        </div>
+        <div class="support left"></div>
+        <div class="support right"></div>
+        <button id="restart"><span>NEW GAME</span></button>
+
+    </div>
+    <!--end game board-->
+
+    <!--model View for Help-->
+    <div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>RULES / INSTRUCTION</h3>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>There are seven rows vertically and six rows horizontally.</li>
+                        <li>The two colors of the checkers are red or black</li>
+                        <li>First player drops one of their color checkers into one of the slots in the board. Then, players alternate turns dropping checkers into the board</li>
+                        <li><b>The object of the game is to get four of your color checkers either vertically, horizontally, or diagonally. </b></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end modal view for help-->
+
+    <script src="./js/connect-four.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../img/bg9.jpg) no-repeat;
+    background-size: cover;
+}
+
+
+/*Game Board*/
+
+#board {
+    margin-top: 20px;
+    padding: 0;
+    width: 50%;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    background-color: #00f;
+    border-collapse: separate;
+    border-spacing: 10px;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+}
+
+td {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+td:hover {
+    opacity: 0.5;
+}
+
+.support {
+    height: 50px;
+    width: 15px;
+    background-color: #00f;
+    border-radius: 0 0 10px 10px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.Black {
+    background: black;
+}
+
+.Red {
+    background: #f00;
+}
+
+.Black:hover,
+.Red:hover {
+    opacity: 1;
+}
+
+#msgs {
+    display: none;
+}
+
+#turn {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+#turn span {
+    display: inline-block;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    position: relative;
+    top: 10px;
+}
+
+
+/*End Game Board*/
+
+#restart {
+    width: 100%;
+    margin-top: 15px;
+    font-weight: bold;
+    border: none;
+    background: #00f;
+    border-radius: 25px;
+    padding: 10px 10px;
+    color: #ffffff;
+    box-shadow: 0 7px #999;
+    font-size: 20px;
+}
+
+#restart:active {
+    box-shadow: 0 5px #00f;
+    color: #00f;
+    background: #fff;
+    border: 2px solid #00f;
+    transform: translateY(4px);
+}
+
+#restart:hover {
+    color: #00f;
+    background: #fff;
+    border: 2px solid #00f;
+    /*-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    */
+}
+
+
+/*Responsive Board*/
+
+@media (max-width:600px) {
+    td {
+        height: 35px;
+        width: 35px;
+    }
+    #board {
+        padding: 0;
+        width: 75%;
+    }
+}
+
+@media (min-width:1024px) {
+    #board {
+        width: 30%;
+    }
+}
+
+
+/*End responsive Board*/
